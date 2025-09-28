@@ -1,11 +1,12 @@
 """
 Reproducible Benchmark Suite for LLM Hallucination Mitigation
 
-This module implements the benchmark test suite used to demonstrate 71% reduction
-in hallucination rates when applying the metacognitive self-correction framework.
+This module implements a benchmark test suite for evaluating hallucination mitigation
+frameworks. The framework demonstrates metacognitive self-correction patterns.
 
-Test cases are based on the original validation study comparing baseline vs.
-meta-prompt guided responses across 7 challenging queries.
+Note: The 71% reduction figure comes from a conceptual evaluation comparing baseline
+vs. framework-guided prompting strategies. Actual results will vary by model and
+implementation. This is a demonstration framework for educational purposes.
 """
 
 from typing import Dict, List, Callable, Optional
@@ -34,10 +35,13 @@ class BenchmarkSuite:
     """
     Implements the complete benchmark suite for hallucination mitigation evaluation.
 
-    Based on the original 7-test validation study that demonstrated:
-    - Baseline hallucination rate: 7/7 (100%)
-    - Framework hallucination rate: 2/7 (29%)
-    - Uncertainty acknowledgment: 0/7 → 7/7 (100% improvement)
+    This framework demonstrates how metacognitive prompting can reduce hallucinations.
+    In conceptual testing with 7 challenging queries:
+    - Baseline approach: High hallucination tendency
+    - Framework approach: Reduced hallucination through uncertainty acknowledgment
+    - Key improvement: Explicit uncertainty markers and evidence requirements
+
+    Note: Results are illustrative. Actual performance varies by model and implementation.
     """
 
     def __init__(self):
