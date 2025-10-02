@@ -63,7 +63,7 @@ This framework bridges cognitive neuroscience research on human apophenia (false
 ### Installation
 
 ```bash
-git clone https://github.com/blai90/llm-hallucination-reduction.git
+git clone https://github.com/ScottDougBlain/llm-hallucination-reduction.git
 cd llm-hallucination-reduction
 pip install -r requirements.txt
 pip install -e .
@@ -298,7 +298,7 @@ We welcome contributions that enhance the framework's effectiveness:
 
 ```bash
 # Clone and install in development mode
-git clone https://github.com/blai90/llm-hallucination-reduction.git
+git clone https://github.com/ScottDougBlain/llm-hallucination-reduction.git
 cd llm-hallucination-reduction
 pip install -e ".[dev]"
 
@@ -318,7 +318,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Links
 
 - **Documentation**: See code and examples for usage details
-- **Issues**: [GitHub Issues](https://github.com/blai90/llm-hallucination-reduction/issues)
+- **Issues**: [GitHub Issues](https://github.com/ScottDougBlain/llm-hallucination-reduction/issues)
 
 ---
 
