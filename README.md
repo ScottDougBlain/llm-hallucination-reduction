@@ -2,7 +2,7 @@
 
 A metacognitive self-correction framework that applies cognitive behavioral therapy principles to reduce LLM hallucinations through epistemic humility, evidence gathering, verification, uncertainty calibration, and structured response generation.
 
-## 🎯 Key Results
+## Key Results
 
 **71% Reduction in Hallucination Rates**: Applied to Claude 3.7, our framework reduced hallucination rates from 7/7 (100%) to 2/7 (29%) on challenging test queries while increasing honest uncertainty acknowledgment from 0/7 to 7/7 (100%).
 
@@ -11,7 +11,7 @@ A metacognitive self-correction framework that applies cognitive behavioral ther
 | Baseline    | 7/7 (100%)        | 0/7 (0%)              | 9.6s             |
 | Meta-prompt | 2/7 (29%)         | 7/7 (100%)            | 10.4s            |
 
-## 🧠 Psychological Foundation
+## Psychological Foundation
 
 This framework bridges cognitive neuroscience research on human apophenia (false positive pattern recognition) with clinical frameworks for reducing delusions in psychotic disorders. By applying metacognitive principles from Cognitive Behavioral Therapy (CBT), we address the fundamental epistemic processes underlying hallucination generation in LLMs.
 
@@ -22,7 +22,7 @@ This framework bridges cognitive neuroscience research on human apophenia (false
 - **Metacognitive Awareness**: Implements self-monitoring processes found effective in clinical populations
 - **Uncertainty Tolerance**: Reduces the drive to generate plausible-sounding but false information
 
-## 🏗️ Framework Architecture
+## Framework Architecture
 
 ### Five-Step Metacognitive Process
 
@@ -58,12 +58,12 @@ This framework bridges cognitive neuroscience research on human apophenia (false
    - Provide alternatives when verification fails
    - Summarize key uncertainties
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/llm-hallucination-reduction.git
+git clone https://github.com/blai90/llm-hallucination-reduction.git
 cd llm-hallucination-reduction
 pip install -r requirements.txt
 pip install -e .
@@ -105,7 +105,7 @@ python -m src.benchmark_suite --test-id SZ_REFERENCES
 python -m src.benchmark_suite --list-tests
 ```
 
-## 📊 Validation Study
+## Validation Study
 
 ### Test Cases
 
@@ -134,7 +134,7 @@ The framework demonstrated consistent improvements across all test categories:
 - **Academic domains**: 100% improvement in uncertainty acknowledgment
 - **Precision requirements**: Most significant risk reduction (0.7+ average)
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Framework Components
 
@@ -175,7 +175,7 @@ Automatic confidence inference from linguistic markers:
 - **Low confidence**: "might", "possibly", "uncertain"
 - **Medium confidence**: Default for neutral language
 
-## 📈 API Integration Examples
+## API Integration Examples
 
 ### OpenAI Integration
 
@@ -217,7 +217,7 @@ def claude_response(prompt: str) -> str:
 result = mitigator.apply_framework("Your query here", claude_response)
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the comprehensive test suite:
 
@@ -240,7 +240,7 @@ pytest tests/ -v --tb=short
 - **Benchmark Tests**: Validation suite functionality
 - **Mock Tests**: API integration without external dependencies
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -264,7 +264,7 @@ mitigator = HallucinationMitigator()
 mitigator.meta_prompt = mitigator.meta_prompt + "\nAdditional medical safety considerations..."
 ```
 
-## 📚 Related Work & Citations
+## Related Work & Citations
 
 This framework builds upon extensive research in cognitive psychology and AI safety:
 
@@ -282,9 +282,9 @@ This framework builds upon extensive research in cognitive psychology and AI saf
 
 ### Author Publications
 
-*[Include links to your relevant psychology papers that inform this approach]*
+This framework draws on clinical psychology principles from CBT and metacognitive therapy research.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions that enhance the framework's effectiveness:
 
@@ -298,7 +298,7 @@ We welcome contributions that enhance the framework's effectiveness:
 
 ```bash
 # Clone and install in development mode
-git clone https://github.com/yourusername/llm-hallucination-reduction.git
+git clone https://github.com/blai90/llm-hallucination-reduction.git
 cd llm-hallucination-reduction
 pip install -e ".[dev]"
 
@@ -311,20 +311,18 @@ flake8 src/ tests/
 mypy src/
 ```
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🔗 Links
+## Links
 
-- **Documentation**: [Full API Documentation](docs/)
-- **Paper**: [Metacognitive Approaches to AI Hallucination Reduction](link-to-paper)
-- **Blog Post**: [From Psychology to AI Safety](link-to-blog)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/llm-hallucination-reduction/issues)
+- **Documentation**: See code and examples for usage details
+- **Issues**: [GitHub Issues](https://github.com/blai90/llm-hallucination-reduction/issues)
 
 ---
 
-## 🎓 AI Safety Context
+## AI Safety Context
 
 This framework represents a novel application of clinical psychology insights to AI alignment challenges. By understanding hallucinations as epistemic failures analogous to human cognitive biases, we can develop more robust approaches to AI truthfulness.
 
