@@ -4,7 +4,7 @@ A metacognitive self-correction framework that applies cognitive behavioral ther
 
 ## Key Results
 
-**71% Reduction in Hallucination Rates**: Applied to Claude 3.7, our framework reduced hallucination rates from 7/7 (100%) to 2/7 (29%) on challenging test queries while increasing honest uncertainty acknowledgment from 0/7 to 7/7 (100%).
+**71% Reduction in Hallucination Rates**: Achieved on our benchmark suite of 7 challenging queries designed to provoke factual fabrication. Applied to Claude 3.7, our framework reduced hallucination rates from 7/7 (100%) to 2/7 (29%) while increasing honest uncertainty acknowledgment from 0/7 to 7/7 (100%).
 
 | Condition   | Hallucination Rate | Limitations Disclaimer | Mean CoT Latency |
 |-------------|-------------------|------------------------|------------------|
@@ -280,9 +280,14 @@ This framework builds upon extensive research in cognitive psychology and AI saf
 - **Uncertainty Quantification**: Calibrated confidence in AI systems
 - **Hallucination Detection**: Automated identification of fabricated content
 
-### Author Publications
+### Framework Grounded In
 
-This framework draws on clinical psychology principles from CBT and metacognitive therapy research.
+This framework draws on clinical psychology principles from CBT and metacognitive therapy research, including:
+
+- **Cognitive Behavioral Therapy (CBT)**: Reality-testing techniques for correcting cognitive distortions
+- **Metacognitive Therapy**: Self-monitoring and awareness strategies for delusional thinking
+- **Apophenia Research**: Understanding false pattern recognition and false positive bias (Blain et al., 2020)
+- **Signal Detection Theory**: Frameworks for distinguishing signal from noise in cognition
 
 ## Contributing
 
