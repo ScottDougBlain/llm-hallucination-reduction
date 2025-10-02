@@ -1,7 +1,7 @@
 # Apophenia-Informed Hallucination Mitigation Framework
 ## Applying Signal Detection Theory and Clinical Insights to LLM Truthfulness
 
-*Scott D. Blain, PhD | NSF Graduate Research Fellow | [Published Research on Apophenia](https://doi.org/10.1037/abn0000474)*
+*Scott D. Blain, PhD | NSF Graduate Research Fellow | [Published Research on Apophenia](https://pmc.ncbi.nlm.nih.gov/articles/PMC7112154/)*
 
 ## Abstract
 
