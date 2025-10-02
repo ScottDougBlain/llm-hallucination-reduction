@@ -351,11 +351,6 @@ mypy src/
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## Links
-
-- **Documentation**: See code and examples for usage details
-- **Issues**: [GitHub Issues](https://github.com/ScottDougBlain/llm-hallucination-reduction/issues)
-
 ---
 
 ## AI Safety Context
