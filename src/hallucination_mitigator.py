@@ -192,25 +192,35 @@ Prompt:
         return ConfidenceLevel.MEDIUM
 
     def _generate_verification_questions(self, response: str) -> List[VerificationQuestion]:
-        """Generate verification questions for the three focus areas."""
+        """Generate verification questions for the three focus areas.
+
+        Note: In production, these would be evaluated by the LLM or external verification.
+        Current implementation provides heuristic-based assessment.
+        """
+        # Simple heuristic checks for demonstration
+        has_evidence_tags = bool(re.search(r'\[(?:URL|DOI|PMID|MEMORY|N/E):[^\]]*\]', response))
+        has_confidence_markers = any(marker in response.lower()
+                                    for marker in ['high confidence', 'medium confidence',
+                                                 'low confidence', 'uncertain'])
+
         questions = [
             VerificationQuestion(
                 question="Are all factual claims in this response accurate and verifiable?",
                 focus_area="factual accuracy",
-                answer=True,  # Would be determined by actual verification
-                rationale="All claims include appropriate evidence tags"
+                answer=has_evidence_tags,  # Heuristic: presence of evidence tags
+                rationale="Evidence tags present" if has_evidence_tags else "No evidence tags found"
             ),
             VerificationQuestion(
                 question="Is the logical flow of the argument consistent throughout?",
                 focus_area="logical consistency",
-                answer=True,
-                rationale="Response follows structured reasoning pattern"
+                answer=len(response) > 100,  # Heuristic: sufficient length for structured response
+                rationale="Response appears structured" if len(response) > 100 else "Response too brief"
             ),
             VerificationQuestion(
                 question="Does this response address all aspects of the original query?",
                 focus_area="completeness",
-                answer=True,
-                rationale="All key components of query are addressed"
+                answer=has_confidence_markers,  # Heuristic: includes uncertainty calibration
+                rationale="Includes confidence assessment" if has_confidence_markers else "Missing confidence markers"
             )
         ]
         return questions

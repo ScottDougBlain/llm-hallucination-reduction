@@ -13,12 +13,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="llm-hallucination-reduction",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Scott Blain",
+    author_email="scottdoug.blain@gmail.com",
     description="A metacognitive self-correction framework for reducing LLM hallucinations",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/llm-hallucination-reduction",
+    url="https://github.com/ScottDougBlain/llm-hallucination-reduction",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     classifiers=[
@@ -54,13 +54,13 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "hallucination-benchmark=benchmark_suite:main",
+            "hallucination-benchmark=src.benchmark_suite:run_benchmark",
         ],
     },
     keywords="llm, hallucination, ai-safety, cognitive-bias, metacognition",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/llm-hallucination-reduction/issues",
-        "Source": "https://github.com/yourusername/llm-hallucination-reduction",
-        "Documentation": "https://github.com/yourusername/llm-hallucination-reduction#readme",
+        "Bug Reports": "https://github.com/ScottDougBlain/llm-hallucination-reduction/issues",
+        "Source": "https://github.com/ScottDougBlain/llm-hallucination-reduction",
+        "Documentation": "https://github.com/ScottDougBlain/llm-hallucination-reduction#readme",
     },
 )

@@ -15,7 +15,7 @@ import json
 import time
 from pathlib import Path
 
-from hallucination_mitigator import HallucinationMitigator
+from .hallucination_mitigator import HallucinationMitigator
 
 
 @dataclass

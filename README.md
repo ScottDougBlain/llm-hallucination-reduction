@@ -1,19 +1,21 @@
 # LLM Hallucination Mitigation Framework
 
-A metacognitive self-correction framework that applies cognitive behavioral therapy principles to reduce LLM hallucinations through epistemic humility, evidence gathering, verification, uncertainty calibration, and structured response generation.
+A structured prompting framework that implements metacognitive self-correction strategies to reduce LLM hallucinations through evidence tagging, verification questions, and uncertainty calibration.
 
-## Key Results
+## Preliminary Results
 
-**71% Reduction in Hallucination Rates**: Achieved on our benchmark suite of 7 challenging queries designed to provoke factual fabrication. Applied to Claude 3.7, our framework reduced hallucination rates from 7/7 (100%) to 2/7 (29%) while increasing honest uncertainty acknowledgment from 0/7 to 7/7 (100%).
+**Initial Testing on 7 Challenging Queries**: In preliminary testing with Claude 3.7 on a small benchmark suite of 7 queries specifically designed to provoke hallucinations, our structured prompting approach showed promising results, with hallucination rates dropping from 7/7 to 2/7 and uncertainty acknowledgment improving from 0/7 to 7/7.
 
-| Condition   | Hallucination Rate | Limitations Disclaimer | Mean CoT Latency |
-|-------------|-------------------|------------------------|------------------|
-| Baseline    | 7/7 (100%)        | 0/7 (0%)              | 9.6s             |
-| Meta-prompt | 2/7 (29%)         | 7/7 (100%)            | 10.4s            |
+| Condition   | Hallucination Rate | Uncertainty Acknowledgment | Mean Response Time |
+|-------------|-------------------|----------------------------|-------------------|
+| Baseline    | 7/7 (100%)        | 0/7 (0%)                  | 9.6s              |
+| Framework   | 2/7 (29%)         | 7/7 (100%)                | 10.4s             |
 
-## Psychological Foundation
+**Important Note**: These are preliminary results from a small proof-of-concept evaluation. Rigorous testing with larger sample sizes, diverse query types, and multiple models would be needed to validate effectiveness claims.
 
-This framework bridges cognitive neuroscience research on human apophenia (false positive pattern recognition) with clinical frameworks for reducing delusions in psychotic disorders. By applying metacognitive principles from Cognitive Behavioral Therapy (CBT), we address the fundamental epistemic processes underlying hallucination generation in LLMs.
+## Conceptual Inspiration
+
+This framework draws loose inspiration from psychological concepts including metacognition, reality-testing, and uncertainty tolerance. While we reference ideas from CBT and cognitive psychology, this is fundamentally a structured prompting technique rather than a clinical intervention.
 
 ### Core Psychological Principles
 
@@ -105,11 +107,11 @@ python -m src.benchmark_suite --test-id SZ_REFERENCES
 python -m src.benchmark_suite --list-tests
 ```
 
-## Validation Study
+## Proof-of-Concept Evaluation
 
 ### Test Cases
 
-Our validation used 7 carefully designed test cases that commonly trigger hallucinations:
+Our initial proof-of-concept used 7 test cases designed to trigger common hallucination patterns:
 
 1. **Academic References** (`SZ_REFERENCES`): Recent citations with date constraints
 2. **Pharmacological Data** (`DRUG_BINDING`): Precise binding affinity values
@@ -122,17 +124,20 @@ Our validation used 7 carefully designed test cases that commonly trigger halluc
 ### Methodology
 
 - **Model**: Claude 3.7 with thinking enabled, tool-use disabled
-- **Evaluation**: Binary hallucination classification (presence of fabricated information)
-- **Metrics**: Hallucination rate, uncertainty acknowledgment, response latency
-- **Validation**: Manual review of each response for factual accuracy
+- **Evaluation**: Manual binary classification (hallucination present/absent)
+- **Metrics**: Hallucination rate, uncertainty acknowledgment, response time
+- **Sample Size**: 7 queries (insufficient for statistical significance)
+- **Limitations**: No inter-rater reliability, small sample, single model tested
 
-### Results Analysis
+### Observed Patterns
 
-The framework demonstrated consistent improvements across all test categories:
+In our limited testing, we observed:
 
-- **Hard difficulty cases** (5/7): 80% average hallucination reduction
-- **Academic domains**: 100% improvement in uncertainty acknowledgment
-- **Precision requirements**: Most significant risk reduction (0.7+ average)
+- **Uncertainty acknowledgment**: Framework encouraged more explicit uncertainty statements
+- **Evidence tagging**: Structure promoted citation of sources (though accuracy not verified)
+- **Response length**: Framework responses were generally longer and more structured
+
+**Caveat**: These observations are anecdotal from a small proof-of-concept. Rigorous evaluation would require larger samples, multiple evaluators, and statistical analysis.
 
 ## Technical Details
 
@@ -288,6 +293,32 @@ This framework draws on clinical psychology principles from CBT and metacognitiv
 - **Metacognitive Therapy**: Self-monitoring and awareness strategies for delusional thinking
 - **Apophenia Research**: Understanding false pattern recognition and false positive bias (Blain et al., 2020)
 - **Signal Detection Theory**: Frameworks for distinguishing signal from noise in cognition
+
+## Limitations and Caveats
+
+### Current Limitations
+
+1. **Small Sample Size**: Only 7 test cases, insufficient for statistical validity
+2. **Single Model Testing**: Evaluated only on Claude 3.7, generalization unknown
+3. **Subjective Evaluation**: Manual classification without inter-rater reliability
+4. **No External Validation**: Evidence tags not verified against actual sources
+5. **Prompt Engineering**: Essentially sophisticated prompt engineering, not a fundamental solution
+6. **Computational Overhead**: ~8% increase in response time
+7. **Format Dependency**: Relies on specific tag formats that models may not consistently follow
+
+### What This Framework Actually Is
+
+- **A structured prompting technique** for encouraging more careful responses
+- **A demonstration** of how metacognitive strategies might be implemented
+- **A starting point** for research into hallucination mitigation
+- **Open source code** that others can build upon and improve
+
+### What This Framework Is NOT
+
+- **Not a proven solution** to LLM hallucinations
+- **Not validated** through rigorous scientific study
+- **Not a clinical intervention** despite psychological inspiration
+- **Not a guarantee** of factual accuracy
 
 ## Contributing
 
